@@ -1,0 +1,194 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/filter/get-city-list",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "192.168.2.101",
+          "Port": 7450
+        },
+        {
+          "Host": "192.168.2.102",
+          "Port": 7450
+        },
+        {
+          "Host": "192.168.2.103",
+          "Port": 7450
+        }
+      ],
+      "UpstreamPathTemplate": "/v1/api/filter/get-city-list",
+      "UpstreamHttpMethod": [ "Get" ],
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": false,
+        "Period": "10s",
+        "PeriodTimespan": 5,
+        "Limit": 1
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/filter/get-city-district-list",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "192.168.2.101",
+          "Port": 7450
+        },
+        {
+          "Host": "192.168.2.102",
+          "Port": 7450
+        },
+        {
+          "Host": "192.168.2.103",
+          "Port": 7450
+        }
+      ],
+      "UpstreamPathTemplate": "/v1/api/filter/get-city-district-list",
+      "UpstreamHttpMethod": [ "Post" ],
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": false,
+        "Period": "10s",
+        "PeriodTimespan": 5,
+        "Limit": 1
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/filter/get-sector-list",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "192.168.2.101",
+          "Port": 7450
+        },
+        {
+          "Host": "192.168.2.102",
+          "Port": 7450
+        },
+        {
+          "Host": "192.168.2.103",
+          "Port": 7450
+        }
+      ],
+      "UpstreamPathTemplate": "/v1/api/filter/get-sector-list",
+      "UpstreamHttpMethod": [ "Post" ],
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": false,
+        "Period": "10s",
+        "PeriodTimespan": 5,
+        "Limit": 1
+      }
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/news/latest",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "192.168.2.101",
+          "Port": 7450
+        },
+        {
+          "Host": "192.168.2.102",
+          "Port": 7450
+        },
+        {
+          "Host": "192.168.2.103",
+          "Port": 7450
+        }
+      ],
+      "UpstreamPathTemplate": "/v1/api/news/latest",
+      "UpstreamHttpMethod": [ "Post" ],
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": false,
+        "Period": "10s",
+        "PeriodTimespan": 5,
+        "Limit": 1
+      }
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/news/search",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "192.168.2.101",
+          "Port": 7450
+        },
+        {
+          "Host": "192.168.2.102",
+          "Port": 7450
+        },
+        {
+          "Host": "192.168.2.103",
+          "Port": 7450
+        }
+      ],
+      "UpstreamPathTemplate": "/v1/api/news/search",
+      "UpstreamHttpMethod": [ "Post" ],
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": false,
+        "Period": "10s",
+        "PeriodTimespan": 5,
+        "Limit": 1
+      }
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/news/by-city",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "192.168.2.101",
+          "Port": 7450
+        },
+        {
+          "Host": "192.168.2.102",
+          "Port": 7450
+        },
+        {
+          "Host": "192.168.2.103",
+          "Port": 7450
+        }
+      ],
+      "UpstreamPathTemplate": "/v1/api/news/by-city",
+      "UpstreamHttpMethod": [ "Post" ],
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": false,
+        "Period": "10s",
+        "PeriodTimespan": 5,
+        "Limit": 1
+      }
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:5001/",
+    "RateLimitOptions": {
+      "QuotaExceededMessage": "You need to come to the server at the most convenient time :)",
+      "HttpStatusCode": 429
+    }
+  }
+}
